@@ -1,0 +1,65 @@
+*:root{
+    margin: 0px;
+    padding: 0px;
+}
+
+.img{
+    padding-top: 120px;
+    padding-bottom: 30px ;
+    width: 200px ;
+}
+
+.header{
+    width: 100%;
+    height: 87vh;
+    text-align: center;
+    background-size: cover;
+    background-color: rgba(44, 44, 44, 0.89);
+    background-image: url(https://img.freepik.com/free-vector/white-technology-background-concept_23-2148403398.jpg?size=626&ext=jpg); 
+}
+
+.overlay{
+    background: rgba(228, 228, 228, 0.705);
+    width: 100%;
+    height: 87vh;
+    background-size: cover;
+}
+
+.htxt{
+    color: rgb(0, 136, 125);
+}
+
+.htitle{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.bordr{
+    border-style: solid ;
+    border-color: rgb(0, 136, 125);
+    height: 15px;
+    width: 10%;
+    margin-top: 30px ;
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-bottom: 50px;
+}
+
+.grd{
+    padding-top:0px;
+    padding-bottom: 0px;
+    text-align: center;
+}
+
+.space{
+    padding: 30px;
+}
+
+.foot{
+    background: rgba(0, 192, 166, 0.37);
+    padding-top: 12px;
+    padding-bottom: 1px;
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
+}

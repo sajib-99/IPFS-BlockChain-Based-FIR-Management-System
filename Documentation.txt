@@ -1,0 +1,6 @@
+Reqired Technologies...
+
+=> Install npm (more details: https://www.npmjs.com/get-npm)
+=> Install Ganache (https://www.trufflesuite.com/ganache)
+=> Install Truffle (https://www.trufflesuite.com/truffle)
+=> Install React Bootstrap Bootstrap (https://react-bootstrap.github.io/getting-started/introduction)

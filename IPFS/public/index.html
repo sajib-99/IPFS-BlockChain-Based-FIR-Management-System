@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./asset/icofont/icofont.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>IPFS File Upload</title>
+    
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif;" >
+    <div class="container" style=" text-align: center; width: 100%; height: 100vh; background-size:cover;">
+        <img style="margin-top: 40px;" src="https://www.dcoin.co/img/icon-19.13c27127.png" alt="">
+        <h1 style="font-weight: 600;">IPFS The Distributed Web</h1>
+        <p style="font-size: 18px;">A peer-to-peer Distributed protocol<br>
+        Designed to make the web safer, and more open</p>
+        <a style="text-decoration: none; color: white" href="#go">
+        <button style="font-weight: 600; color: #ffff; background-color: rgb(0, 190, 181); padding: 12px; border-style: none; border-radius: 5px;">
+            GET STARTED
+        </button></a>
+    </div>
+            <div style="background-color: rgb(246, 248, 255); padding: 150px;">
+            <h1 id="go" style=" text-align: center; font-weight: 600;">Upload  Your Content On IPFS</h1>
+            <hr style="margin-bottom: 40px; border-radius: 15%; width: 10%; height:5px; margin-left: 45%; margin-right: 45%; color:  rgb(16, 162, 182);" >
+            <div style="background-color: white; padding: 30px; border-style: solid; border-width: 2px; border-color: #17f0f0; border-radius: 5px ;">
+            <form action="/profile" method="post" enctype="multipart/form-data">
+                <div class="row">
+                <h5 style="font-weight:500; margin-bottom: 15px;">Choose The File From Your Directory To Upload in IPFS</h5>
+                <div class="col-8"><input class="form-control" type="file" name="avatar" /></div>
+                <div class="col-4">
+                    <button style="color: aliceblue; font-weight: 500;" class="btn btn-primary"  >
+                        Upload
+                    </button>
+                </div>
+                </div>
+            </form>
+            <div class="row">
+            <h5 style="font-weight: 500; margin-bottom: 15px; margin-top: 50px;">Seach With Your Hash To Download From IPFS</h5>
+            <div class="col-8"><input class="form-control" id="filehash"type="text"></div>
+            <div class="col-4"><button class="btn btn-primary" onclick="loadDoc()">Download</button></div>
+            </div>
+            </div>
+            </div>
+</body>
+    <script>
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                // document.getElementById("demo").innerHTML = this.responseText;
+                console.log(this);
+                window.open(this.responseURL);
+                }
+            };
+            console.log(document.getElementById("filehash").value)
+            xhttp.open("GET", "download/"+document.getElementById("filehash").value, true);
+            xhttp.send();
+        }
+    </script>
+</html>
